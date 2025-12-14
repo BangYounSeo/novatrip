@@ -149,3 +149,5 @@ client/build/
 .DS_Store
 Thumbs.db
 
+uploads/*
+!uploads/.gitkeep
