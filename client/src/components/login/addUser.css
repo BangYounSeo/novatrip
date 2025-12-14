@@ -1,0 +1,110 @@
+/* 화면 중앙 정렬 및 배경 */
+.adduser-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 회원가입 박스 */
+.adduser-box {
+  background-color: white;
+  padding: 40px 50px;
+  border-radius: 19px;
+  box-shadow: 0 6px 22px #505050;
+  width: 350px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+  margin-top: 5%;
+}
+
+/* 제목 */
+.adduser-box h2 {
+  margin-bottom: 24px;
+  color: #505050;
+  font-weight: 600;
+  user-select: none;
+}
+.adduser-box h4 {
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #b8b8b8;
+  user-select: none;
+}
+.adduser-box h5 {
+  text-align: left;
+  margin: 0 0 5px 0;
+  font-weight: 500;
+  color: tomato;
+  user-select: none;
+}
+.adduser-box h6 {
+  text-align: left;
+  margin: 0 0 5px 0;
+  font-weight: 500;
+  color: #b8b8b8;
+  user-select: none;
+}
+
+/* 입력창 */
+.adduser-box input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+  margin-top: 3px;
+}
+
+.adduser-box input:focus {
+  border-color: #b8b8b8;
+  outline: none;
+}
+
+/* 버튼 */
+.adduser-box button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  background-color: #505050;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* disabled 상태 */
+.adduser-box button:disabled {
+  background-color: #ccc;  /* 회색 */
+  cursor: not-allowed;     /* 클릭 불가 커서 */
+}
+
+/* 다음버튼 밑으로 */
+.next-btn-container {
+  margin-top: auto;
+}
+
+/* 성별버튼 */
+.gender-row { display: flex; gap: 12px; }
+.gender-box {
+  flex: 1; height: 44px;
+  border: 2px solid #000; border-radius: 10px;
+  background: #fff; cursor: pointer;
+  font-weight: 600; letter-spacing: 1px;
+  transition: transform .05s ease, background .15s ease, color .15s ease;
+}
+.gender-box.on { background: #000; color: #fff; }
+.gender-box:active { transform: translateY(1px); }
+

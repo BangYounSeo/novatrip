@@ -1,0 +1,94 @@
+/* FindId 모달 내부 페이지 CSS */
+.findid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 제목 */
+.findid-container h2 {
+  margin-bottom: 20px;
+  color: #505050;
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+}
+
+/* 입력창 */
+.findid-container input {
+  box-sizing: border-box; /* ✅ padding, border 포함 폭 계산 */
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.findid-container input:focus {
+  border-color: #b8b8b8;
+  outline: none;
+}
+.findid-container input:focus {
+  border-color: #505050;
+  box-shadow: 0 0 5px rgba(80, 80, 80, 0.2);
+  outline: none;
+}
+
+/* 버튼 */
+.findid-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #505050;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.findid-container button:hover {
+  background-color: #333;
+}
+
+.findid-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #fff;
+}
+
+/* 결과 메시지 */
+.findid-container p {
+  width: 100%;
+  text-align: center;
+  color: #505050;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+  word-break: break-word; /* 너무 길면 줄바꿈 */
+}
+
+/* 모바일 대응 */
+@media (max-width: 480px) {
+  .findid-container {
+    padding: 15px;
+  }
+  .findid-container h2 {
+    font-size: 20px;
+  }
+  .findid-container input, .findid-container button {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .findid-container p {
+    font-size: 14px;
+  }
+}
