@@ -3,7 +3,6 @@ const express = require('express');
 const cors = require('cors');
 const PORT = process.env.PORT || 8080;
 const mongoose = require('mongoose')
-const jwt = require('jsonwebtoken');
 const router = express.Router();
 mongoose.set('strictQuery',false)
 
@@ -19,8 +18,6 @@ require('./models/boardSchema');
 
 const path = require('path');
 const app = express();
-
-const axios = require('axios');
 
 require('./models/memberSchema')
 

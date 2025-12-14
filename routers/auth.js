@@ -11,7 +11,8 @@ const fs = require('fs');
 const path = require('path');
 const KAKAO_REST_API_KEY = process.env.KAKAO_REST_API_KEY;
 const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:3000';
-const REDIRECT_URI = 'http://localhost:8080/login/auth/kakao/callback';
+const REDIRECT_URI = process.env.KAKAO_REDIRECT_URI || 'http://localhost:8080/login/auth/kakao/callback';
+
 
 // 회원탈퇴에 필요함.
 const { Board, Image, Good, Share } = require('../models/boardSchema');
@@ -532,7 +533,6 @@ app.put('/api/change-info', authMiddleware, async (req, res) => {
   // ─────────────────────────────────────────────────────────────
   // 정적 파일/업로드
   // ─────────────────────────────────────────────────────────────
-  app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
   const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, 'uploads/');
