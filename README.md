@@ -82,11 +82,12 @@ NovaTrip은 여행 정보 공유와 커뮤니티 기능을 결합한 서울 기�
 - npm start
 
 ### 환경 변수 설정
-- PORT=8080
-- MONGO_URI=mongodb://localhost:27017
-- MONGO_DB_NAME=NovaTrip
-- JWT_SECRET=YOUR_JWT_SECRET
-- FRONTEND_URL=http://localhost:3000
+- `.env.example` 파일을 참고하여 `.env` 파일 생성
+- MongoDB, JWT, OAuth 관련 환경 변수 설정 필요
+
+### 기본 접속
+Frontend: http://localhost:3000
+Backend: http://localhost:8080
 
 ## 프로젝트를 통해 얻은 점
 - MongoDB 기반 도메인 중심 DB 설계 경험
